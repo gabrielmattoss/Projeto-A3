@@ -2,7 +2,7 @@
 chcp 65001 >nul
 cd /d "%~dp0"
 if not exist bin mkdir bin
-javac -encoding UTF-8 -source 8 -target 8 -d bin Chamado.java Main.java
+javac --release 8 -Xlint:-options -encoding UTF-8 -d bin Chamado.java Main.java
 if errorlevel 1 (
     echo Nao foi possivel compilar. Verifique se o JDK 8 ou superior esta instalado e configurado no PATH.
     pause
